@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/africa-2.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,8 +69,8 @@
             >
               <div class="title mx-5 px-5 animated slideInDown">
                 <div class="title-center">
-                  <h5>Welcome</h5>
-                  <h1 class="display-1">TO AFURIX</h1>
+                  <h5>Welcome To</h5>
+                  <h1 class="display-1">AFURIX</h1>
                 </div>
               </div>
               <p class="fs-5 mb-5 animated slideInDown">
@@ -79,9 +79,9 @@
                 scale, and lead.
               </p>
               <a
-                href="#!"
+                href="portfolio.html"
                 class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown"
-                >Explore More</a
+                >Portfolio</a
               >
             </div>
           </div>
@@ -104,11 +104,6 @@
     <div id="contact-us"></div>
 
     <!-- Contact us End -->
-
-    <!-- Portfolio Start -->
-    <div id="portfolio"></div>
-
-    <!-- Portfolio End -->
 
     <div id="footer"></div>
 
@@ -136,15 +131,19 @@
           .then((response) => response.text())
           .then((data) => {
             document.getElementById(id).innerHTML = data;
+
+            if (id === "navbar") {
+              setActiveNav();
+            }
           });
       }
-
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
       loadComponent("portfolio", "components/portfolio.html");
       loadComponent("contact-us", "components/contact-us.html");
       loadComponent("services", "components/services.html");
       loadComponent("about", "components/about.html");
+      loadComponent("header", "components/header.html");
     </script>
   </body>
 </html>

@@ -172,7 +172,7 @@
   padding-top: 200px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/carousel-1.jpg) top center no-repeat;
+    url(../img/crop-gpt.jpeg) top center no-repeat;
   background-size: cover;
 }
 
@@ -299,54 +299,47 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.team-item .team-body {
-  position: relative;
+/* Company name */
+.project-company {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
   overflow: hidden;
-  border-radius: 15px;
-  aspect-ratio: 1/1;
+  min-height: 2.6em;
 }
 
-.team-item .team-body .team-before,
-.team-item .team-body .team-after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: calc(100% - 60px);
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 0.5s;
+/* Project title */
+.project-title {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  color: var(--bs-primary);
 }
 
-.team-item .team-body .team-after {
-  left: auto;
-  right: 0;
+/* Description text */
+.project-desc {
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  line-height: 1.45;
+  color: #979797;
 }
 
-.team-item .team-body .team-before {
-  text-align: right;
+/* Visit button text */
+.team-name h6 {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  margin: 0;
 }
 
-.team-item:hover .team-body .team-before,
-.team-item:hover .team-body .team-after {
-  width: 50%;
-}
-
-.team-item .team-body .team-before span,
-.team-item .team-body .team-after span {
-  margin: 5px;
-  color: var(--bs-white);
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.team-item:hover .team-body .team-before span,
-.team-item:hover .team-body .team-after span {
-  opacity: 1;
-  transition-delay: 0.2s;
+/* spacing safety */
+.team-item {
+  margin-bottom: 0.5rem;
 }
 
 /*** Testimonial ***/
@@ -404,4 +397,136 @@
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: footerAnimatedBg 50s linear infinite;
+}
+
+/* PROCESS SECTION */
+
+.process-box {
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.process-box:hover {
+  transform: translateY(-8px);
+  border-color: var(--bs-primary);
+}
+
+.process-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--bs-primary);
+  margin-bottom: 15px;
+}
+
+/* SERVICE IMAGE BOX */
+
+.service-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: white;
+}
+
+/* FEATURE BOX */
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  border-color: var(--bs-primary);
+  transform: translateY(-3px);
+}
+
+.feature-box i {
+  color: var(--bs-primary);
+  font-size: 18px;
+}
+
+/* DASHBOARD PREVIEW */
+
+.dashboard-preview {
+  position: relative;
+}
+
+.dashboard-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 80px rgba(0, 255, 120, 0.15);
+  pointer-events: none;
+}
+
+/* SERVICE LIST */
+
+.service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.industry-card {
+  background: var(--bs-dark);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bs-primary);
+}
+
+.industry-icon {
+  font-size: 26px;
+  color: var(--bs-primary);
+  margin-bottom: 15px;
+}
+
+.industry-card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.industry-card ul li {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.about-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-image-box img {
+  transition: 0.4s;
+}
+
+.about-image-box:hover img {
+  transform: scale(1.05);
 }

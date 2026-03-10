@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Afurix Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/africa-2.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid p-0">
+      <div id="navbar"></div>
+
+      <div class="page-header pb-5">
+        <div class="container text-center py-5">
+          <h1 class="display-4 text-uppercase mb-3 animated slideInDown">
+            Our Work
+          </h1>
+          <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+              <li class="breadcrumb-item">
+                <a class="text-white" href="/">Home</a>
+              </li>
+              <li
+                class="breadcrumb-item text-primary active"
+                aria-current="page"
+              >
+                Our Work
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="text-center">
+          <div class="title wow fadeInUp" data-wow-delay="0.1s">
+            <div class="title-center">
+              <h5>OUR WORK</h5>
+              <h1>Projects That Deliver Results</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4" id="projects"></div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-outline-primary border-2 btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+      function loadComponent(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(id).innerHTML = data;
+
+            if (id === "navbar") {
+              setActiveNav();
+            }
+          });
+      }
+
+      loadComponent("navbar", "components/navbar.html");
+      loadComponent("footer", "components/footer.html");
+      loadComponent("portfolio", "components/portfolio.html");
+      loadComponent("contact-us", "components/contact-us.html");
+      loadComponent("services", "components/services.html");
+      loadComponent("about", "components/about.html");
+      loadComponent("header", "components/header.html");
+    </script>
+    <script>
+      const projectData = [
+        {
+          company: "Uncanny Valley Comics",
+          project: "E-commerce Web Application",
+          description:
+            "A full-featured e-commerce platform for comic book sales, including product catalog management, shopping cart functionality, and streamlined order processing.",
+          link: "https://uncannyvalleycomics.com/",
+          img: "img/sites/uncanny.png",
+        },
+        {
+          company: "Portera",
+          project: "Business Website",
+          description:
+            "A professional WordPress website for a training academy, designed to reflect the brand, showcase programs, and provide an intuitive user experience for prospective learners.",
+          link: "https://portera.ac.ke/",
+          img: "img/sites/portera.png",
+        },
+        {
+          company: "CariCanary",
+          project: "SaaS Platform",
+          description:
+            "A scalable SaaS platform that delivers cloud-based services through an interactive web interface, integrating both front-end usability and robust back-end functionality.",
+          link: "https://caricanary.com/",
+          img: "img/sites/canary.png",
+        },
+        {
+          company: "Audience Booking Platform",
+          project: "Booking Web Application",
+          description:
+            "A web-based booking system built with Laravel that enables users to manage reservations, handle booking workflows, and access a structured user management system.",
+          link: "https://staging.audiense.tv/",
+          img: "img/sites/audiense.png",
+        },
+        {
+          company: "Solvit Limited",
+          project: "Corporate Website",
+          description:
+            "A responsive WordPress corporate website designed to present company services, improve online presence, and provide efficient content management.",
+          link: "https://solvit.co.ke/",
+          img: "img/sites/solvit.png",
+        },
+        {
+          company: "Grade Writers",
+          project: "Laravel Web Application",
+          description:
+            "A database-driven Laravel web application supporting academic service workflows, featuring dynamic content management and structured backend operations.",
+          link: "https://myhomeworkwriter.com/",
+          img: "img/sites/homework.png",
+        },
+        {
+          company: "Leap Afrique",
+          project: "Organizational Website",
+          description:
+            "A WordPress website designed to support organizational communication, highlight programs, and deliver information aligned with the brand’s mission and outreach goals.",
+          link: "https://leapafrique.com/",
+          img: "img/sites/leap.png",
+        },
+      ];
+
+      const container = document.getElementById("projects");
+
+      for (let i = 0; i < projectData.length; i++) {
+        const item = projectData[i];
+
+        container.innerHTML += `
+    <div class="col-6 col-md-4 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+
+  <h5 class="text-uppercase mb-1 project-company">
+    ${item.company}
+  </h5>
+
+  <div class="team-item">
+
+    <div class="team-body">
+      <img class="img-fluid" src=${item.img} alt="" />
+      <div class="team-after"></div>
+    </div>
+
+    <a class="team-name" href=${item.link}>
+      <h6>Visit Site</h6>
+    </a>
+
+  </div>
+
+  <div class="project-title">
+    ${item.project}
+  </div>
+
+  <span class="project-desc">
+    ${item.description}
+  </span>
+
+</div>
+  `;
+      }
+    </script>
+  </body>
+</html>
