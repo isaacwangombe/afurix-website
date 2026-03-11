@@ -172,7 +172,7 @@
   padding-top: 200px;
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/gpt-crop.png) top center no-repeat;
+    url(../img/gpt-crop.webp) top center no-repeat;
   background-size: cover;
 }
 
