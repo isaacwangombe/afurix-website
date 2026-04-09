@@ -536,3 +536,9 @@
   height: 100px;
   width: 200px;
 }
+@media (max-width: 768px) {
+  .afurix-logo-nav {
+    height: 60px;
+    width: auto;
+  }
+}
